@@ -286,6 +286,10 @@ font-family: $font-stack;
 		list-style: none;
 	}
 
+	#watch .base-minutes-holder {
+	  @include transform-translate(6px, -285px);
+	}
+
 	.base-hours-holder,
 	.base-minutes-holder {
 		@include transition-time(1s)

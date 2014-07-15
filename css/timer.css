@@ -328,6 +328,12 @@ body {
   padding: 0;
   list-style: none;
 }
+#watch .base-minutes-holder {
+  -webkit-transform: translate(6px, -285px);
+  -moz-transform: translate(6px, -285px);
+  -o-transform: translate(6px, -285px);
+  transform: translate(6px, -285px);
+}
 #watch .base-hours-holder,
 #watch .base-minutes-holder {
   -webkit-transition: 1s;
