@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class=''>
+<head>
+    <meta charset='UTF-8'>
+    <title>No JS Timepicker</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/clock.css">
+
+</head>
+<body>
+    <div id="watch">
+
+            <!-- Hidden Digital time selector at base -->
+            <input type="radio" id="check-hour" name="select-time" checked/>
+            <label for="check-hour" class="hour-base">&nbsp;&nbsp;</label>
+
+            <span class="colon">:</span>
+
+            <input type="radio" id="check-minute"  name="select-time" />
+            <label for="check-minute" class="minutes-base">&nbsp;&nbsp;</label>
+
+            <!-- Minutes numbers -->
+
+            <input type="radio" id="check-min-1"  name="select-min"/>
+            <label for="check-min-1" class="check-1-label minutes-label" min-attr="05">1</label>
+
+            <input type="radio" id="check-min-2"  name="select-min"/>
+            <label for="check-min-2" class="check-2-label minutes-label" min-attr="10">2</label>
+
+            <input type="radio" id="check-min-3"  name="select-min"/>
+            <label for="check-min-3" class="check-3-label minutes-label" min-attr="15">3</label>
+
+            <input type="radio" id="check-min-4"  name="select-min"/>
+            <label for="check-min-4" class="check-4-label minutes-label" min-attr="20">4</label>
+
+            <input type="radio" id="check-min-5"  name="select-min"/>
+            <label for="check-min-5" class="check-5-label minutes-label" min-attr="25">5</label>
+
+            <input type="radio" id="check-min-6"  name="select-min"/>
+            <label for="check-min-6" class="check-6-label minutes-label" min-attr="30">6</label>
+
+            <input type="radio" id="check-min-7"  name="select-min"/>
+            <label for="check-min-7" class="check-7-label minutes-label" min-attr="35">7</label>
+
+            <input type="radio" id="check-min-8"  name="select-min"/>
+            <label for="check-min-8" class="check-8-label minutes-label" min-attr="40">8</label>
+
+            <input type="radio" id="check-min-9"  name="select-min"/>
+            <label for="check-min-9" class="check-9-label minutes-label" min-attr="45">9</label>
+
+            <input type="radio" id="check-min-10"  name="select-min"/>
+            <label for="check-min-10" class="check-10-label minutes-label" min-attr="50">10</label>
+
+            <input type="radio" id="check-min-11"  name="select-min"/>
+            <label for="check-min-11" class="check-11-label minutes-label" min-attr="55">11</label>            
+
+            <input type="radio" id="check-min-12"  name="select-min"/>
+            <label for="check-min-12" class="check-12-label minutes-label" min-attr="00">12</label>      
+
+            <!-- Hours numbers -->
+
+            <input type="radio" id="check-hour-1"  name="select-hour"/>
+            <label for="check-hour-1" class="check-1-label hours-label" hour-attr="01">1</label>
+
+            <input type="radio" id="check-hour-2"  name="select-hour"/>
+            <label for="check-hour-2" class="check-2-label hours-label" hour-attr="02">2</label>
+
+            <input type="radio" id="check-hour-3"  name="select-hour"/>
+            <label for="check-hour-3" class="check-3-label hours-label" hour-attr="03">3</label>
+
+            <input type="radio" id="check-hour-4"  name="select-hour"/>
+            <label for="check-hour-4" class="check-4-label hours-label" hour-attr="04">4</label>
+
+            <input type="radio" id="check-hour-5"  name="select-hour"/>
+            <label for="check-hour-5" class="check-5-label hours-label" hour-attr="05">5</label>
+
+            <input type="radio" id="check-hour-6"  name="select-hour"/>
+            <label for="check-hour-6" class="check-6-label hours-label" hour-attr="06">6</label>
+
+            <input type="radio" id="check-hour-7"  name="select-hour"/>
+            <label for="check-hour-7" class="check-7-label hours-label" hour-attr="07">7</label>
+
+            <input type="radio" id="check-hour-8"  name="select-hour"/>
+            <label for="check-hour-8" class="check-8-label hours-label" hour-attr="08">8</label>
+
+            <input type="radio" id="check-hour-9"  name="select-hour"/>
+            <label for="check-hour-9" class="check-9-label hours-label" hour-attr="09">9</label>
+
+            <input type="radio" id="check-hour-10"  name="select-hour"/>
+            <label for="check-hour-10" class="check-10-label hours-label" hour-attr="10">10</label>
+
+            <input type="radio" id="check-hour-11"  name="select-hour"/>
+            <label for="check-hour-11" class="check-11-label hours-label" hour-attr="11">11</label>    
+
+            <input type="radio" id="check-hour-12"  name="select-hour"/>
+            <label for="check-hour-12" class="check-12-label hours-label" hour-attr="12">12</label>
+
+            <!-- Hours needle -->
+            <div class="hours-hand-holder">
+                <div class="hours-hand"></div>
+            </div>
+
+            <!-- Minutes needle -->
+            <div class="minutes-hand-holder">
+                <div class="minutes-hand"></div>
+            </div>
+
+            <!-- Digital hour display at base -->
+
+            <div class="base-hour-display">
+                <ul class="base-hours-holder">
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li>05</li>
+                    <li>06</li>
+                    <li>07</li>
+                    <li>08</li>
+                    <li>09</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                </ul>
+            </div>
+
+
+            <!-- Digital minutes display at base -->
+
+            <div class="base-minutes-display">
+                <ul class="base-minutes-holder">
+                    <li>05</li>
+                    <li>10</li>
+                    <li>15</li>
+                    <li>20</li>
+                    <li>25</li>
+                    <li>30</li>
+                    <li>35</li>
+                    <li>40</li>
+                    <li>45</li>
+                    <li>50</li>
+                    <li>55</li>
+                    <li>00</li>
+                </ul>
+            </div>
+
+            <div class="center-point"></div>
+    </div>
+    <div class="frame-base"></div>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+$font-stack: 'Roboto', sans-serif;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transform-rotate($rotateangle) {
+	transform:rotate($rotateangle);
+	-ms-transform:rotate($rotateangle); 
+	-webkit-transform:rotate($rotateangle); 
+}
+
+@mixin transition-time($transitiontime) {
+    -webkit-transition: $transitiontime;
+    -moz-transition: $transitiontime;
+    -o-transition: $transitiontime;
+    transition: $transitiontime;
+}
+
+
+@mixin transform-translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+
+body {
+font-size:62.5%; 
+margin:1em; 
+background: transparent;
+font-family: $font-stack;
+}
+
+
+#watch {
+  position:relative;
+  width: 500px;
+  height: 575px;
+  margin:2em auto;
+  @include border-radius(6em);
+  background: #fafcff;
+  border: 1px solid #c0d2e4;
+
+
+  .minutes-label, .hours-label {
+	  text-decoration: none;
+	  color: #93a5b9;
+	  border: 1px solid #93a5b9;
+	  display: inline-block;
+	  height: 30px;
+	  width: 30px;
+	  @include border-radius(50%);
+	  line-height: 30px;
+	  font-weight: normal;
+	  cursor: pointer;
+	  text-align: center;
+	  font-size: 20px;
+	  position: absolute;
+	}
+
+	.check-1-label { position: absolute; left: 71%; top: 16%;}
+	.check-2-label { position: absolute; top: 33%; left: 82%;}
+	.check-3-label { top: 48%; left: 86%;}
+	.check-4-label { left: 82%; top: 66%;}
+	.check-5-label { left: 70%; top: 80%;}
+	.check-6-label { left: 49%; top: 88%;}
+	.check-7-label { position: absolute; left: 26%; top: 80%;}
+	.check-8-label { left: 14%; top: 65%;}
+	.check-9-label { left: 6%; top: 49%;}
+	.check-10-label { left: 13%; top: 30%;}
+	.check-11-label { left: 26%; top: 16%;}
+	.check-12-label { left: 47%; top: 7%;}
+
+
+	.hours-hand-holder, .minutes-hand-holder {
+	  display: inline-block;
+	  width: 230px;
+	  height: 4px;
+	  position: absolute;
+	  left: 27.4%;
+	  top: 49.7%;
+	  @include transition-time(1s);
+	  @include transform-rotate(-53deg);
+	}
+
+	.hours-hand {
+	  width: 0px;
+	  height: 0px;
+	  border-top: 2px solid transparent;
+	  border-bottom: 2px solid transparent;
+	  border-left: 10em solid #7e94aa;
+	  position: absolute;
+	  left: 50%;
+	}
+
+	.minutes-hand {
+	  width: 0px;
+	  height: 0px;
+	  border-top: 2px solid transparent;
+	  border-bottom: 2px solid transparent;
+	  border-left: 18em solid #7e94aa;
+	  position: absolute;
+	  left: 50%;
+	}
+
+	.minutes-hand-holder {
+      top: 50%;
+	  left: 16.5%;
+	  width: 340px;
+	  @include transform-rotate(391deg);
+	}
+
+	#check-hour:checked ~ .minutes-label {
+	  display: none;
+	}
+
+	#check-minute:checked ~ .hours-label {
+	  display: none;
+	}
+
+	.hour-base,
+	.minutes-base{
+	      z-index: 99;
+		  width: 70px;
+		  height: 100px;
+		  position: absolute;
+		  font-size: 6em;
+		  color: #497dae;
+	}
+	.colon {
+	  position: absolute;
+	  font-size: 6em;
+	  color: #497dae;
+	  left: 4em;
+	   bottom: -1.3em;
+	}
+
+	.minutes-base {
+	    cursor: pointer;
+	    left: 4.5em;
+	    bottom: -1.4em;
+	}
+
+	.hour-base  {
+	    cursor: pointer;
+	    bottom: -1.4em;
+	    left: 2.5em;
+	}
+
+	#check-hour:checked ~ .base-hour-display li,
+	#check-minute:checked  ~ .base-minutes-display li {
+	  color: #fff;
+	}
+
+	.center-point {
+		background: #d3d3d3;
+		border: 1px solid #bcbcbb;
+		@include border-radius(50%);
+		height: 10px;
+		width: 10px;
+		position: absolute;
+		top: 49%;
+		left: 49%;
+	}
+
+	input[type="radio"]{
+	    display: none;
+	}
+
+	#check-hour-1:checked ~ .hours-hand-holder {
+	  @include transform-rotate(-51deg);
+	}
+	#check-hour-2:checked ~ .hours-hand-holder {
+	  @include transform-rotate(-26deg);
+	}
+	#check-hour-3:checked ~ .hours-hand-holder {
+	  @include transform-rotate(0deg);
+	}
+	#check-hour-4:checked ~ .hours-hand-holder {
+	  @include transform-rotate(31deg);
+	}
+	#check-hour-5:checked ~ .hours-hand-holder {
+	  @include transform-rotate(53deg);
+	}
+	#check-hour-6:checked ~ .hours-hand-holder {
+	  @include transform-rotate(90deg);
+	}
+	#check-hour-7:checked ~ .hours-hand-holder {
+	  @include transform-rotate(121deg);
+	}
+	#check-hour-8:checked ~ .hours-hand-holder {
+	  @include transform-rotate(149deg);
+	}
+	#check-hour-9:checked ~ .hours-hand-holder {
+	  @include transform-rotate(180deg);
+	}
+	#check-hour-10:checked ~ .hours-hand-holder {
+	  @include transform-rotate(210deg);
+	}
+	#check-hour-11:checked ~ .hours-hand-holder {
+	  @include transform-rotate(236deg);
+	}
+	#check-hour-12:checked ~ .hours-hand-holder {
+	  @include transform-rotate(-90deg);
+	}
+
+
+
+
+
+	#check-min-1:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(-51deg);
+	}
+	#check-min-2:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(-26deg);
+	}
+	#check-min-3:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(0deg);
+	}
+	#check-min-4:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(31deg);
+	}
+	#check-min-5:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(53deg);
+	}
+	#check-min-6:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(90deg);
+	}
+	#check-min-7:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(124deg);
+	}
+	#check-min-8:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(149deg);
+	}
+	#check-min-9:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(180deg);
+	}
+	#check-min-10:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(210deg);
+	}
+	#check-min-11:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(236deg);
+	}
+	#check-min-12:checked ~ .minutes-hand-holder {
+	  @include transform-rotate(-90deg);
+	}
+
+
+
+
+
+
+
+	.base-hour-display,
+	.base-minutes-display {
+	  position: absolute;
+	  height: 80px;
+	  width: 80px;
+	  bottom: -88px;
+	  left: 29%;
+	  overflow: hidden;
+	}
+
+	.base-minutes-display {
+	  left: 54%;
+	}
+
+	.base-hours-holder li,
+	.base-minutes-holder li {
+		padding: 5px 0;
+		font-size: 6em;
+		color: #497dae;
+		text-align: center;
+	}
+
+	.base-hours-holder,
+	.base-minutes-holder {
+		position: absolute;
+		@include transform-translate(6px, -18px);
+		padding: 0;
+		list-style: none;
+	}
+
+	.base-hours-holder,
+	.base-minutes-holder {
+		@include transition-time(1s)
+	}
+
+
+	#check-hour-1:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -18px);
+	}
+
+	#check-hour-2:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -108px);
+	}
+
+	#check-hour-3:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -195px);
+	}
+
+	#check-hour-4:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -285px);
+	}
+
+	#check-hour-5:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -370px);
+	}
+
+	#check-hour-6:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -460px);
+	}
+
+	#check-hour-7:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -550px);
+	}
+
+	#check-hour-8:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -640px);
+	}
+
+	#check-hour-9:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -730px);
+	}
+
+	#check-hour-10:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -820px);
+	}
+
+	#check-hour-11:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -910px);
+	}
+
+	#check-hour-12:checked ~ .base-hour-display .base-hours-holder {
+	@include transform-translate(6px, -1000px);
+	}
+
+
+
+	#check-min-1:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -18px);
+	}
+
+	#check-min-2:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -108px);
+	}
+
+	#check-min-3:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -195px);
+	}
+
+	#check-min-4:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -285px);
+	}
+
+	#check-min-5:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -370px);
+	}
+
+	#check-min-6:checked ~ .base-minutes-display .base-minutes-holder{
+	@include transform-translate(6px, -460px);
+	}
+
+	#check-min-7:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -550px);
+	}
+
+	#check-min-8:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -640px);
+	}
+
+	#check-min-9:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -730px);
+	}
+
+	#check-min-10:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -820px);
+	}
+
+	#check-min-11:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -910px);
+	}
+
+	#check-min-12:checked ~ .base-minutes-display .base-minutes-holder {
+	@include transform-translate(6px, -1000px);
+	}
+
+
+}
+
+.frame-base {
+	position: absolute;
+	width: 500px;
+	height: 575px;
+	margin: 2em auto;
+	@include border-radius(6em);
+	background: #b8c8d8;
+	border: 1px solid #c0d2e4;
+	z-index: -1;
+	top: 12%;
+	left: 32.6%;
+}
+
+
+
