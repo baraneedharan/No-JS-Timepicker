@@ -52,10 +52,10 @@ font-family: $font-stack;
 	  color: #93a5b9;
 	  border: 1px solid #93a5b9;
 	  display: inline-block;
-	  height: 30px;
-	  width: 30px;
+	  height: 34px;
+	  width: 34px;
 	  @include border-radius(50%);
-	  line-height: 30px;
+	  line-height: 34px;
 	  font-weight: normal;
 	  cursor: pointer;
 	  text-align: center;
@@ -63,18 +63,59 @@ font-family: $font-stack;
 	  position: absolute;
 	}
 
-	.check-1-label { position: absolute; left: 71%; top: 16%;}
-	.check-2-label { position: absolute; top: 33%; left: 82%;}
-	.check-3-label { top: 48%; left: 86%;}
-	.check-4-label { left: 82%; top: 66%;}
-	.check-5-label { left: 70%; top: 80%;}
-	.check-6-label { left: 49%; top: 88%;}
-	.check-7-label { position: absolute; left: 26%; top: 80%;}
-	.check-8-label { left: 14%; top: 65%;}
-	.check-9-label { left: 6%; top: 49%;}
-	.check-10-label { left: 13%; top: 30%;}
-	.check-11-label { left: 26%; top: 16%;}
-	.check-12-label { left: 47%; top: 7%;}
+
+	.check-1-label {
+	  left: 67.9%;
+	  top: 12.5%;
+	}
+	.check-2-label {
+	  top: 27.5%;
+	  left: 82.5%;
+	}
+	.check-3-label {
+	  top: 47.5%;
+	  left: 88%;
+	}
+	.check-4-label {
+	  left: 82.5%;
+	  top: 68%;
+	}
+	.check-5-label {
+	  left: 67.5%;
+	  top: 82.7%;
+	}
+	.check-6-label {
+	  left: 47.5%;
+	  top: 88%;
+	}
+	.check-7-label {
+	  left: 27%;
+	  top: 82.5%;
+	}
+	.check-8-label {
+	  left: 12.5%;
+	  top: 67.5%;
+	}
+	.check-9-label {
+	  left: 6.7%;
+	  top: 47.5%;
+	}
+	.check-10-label {
+	  left: 12.4%;
+	  top: 27.2%;
+	}
+	.check-11-label {
+	  left: 26.9%;
+	  top: 12.5%;
+	}
+	.check-12-label {
+	  left: 47.4%;
+	  top: 7%;
+	}
+
+
+
+
 
 
 	.hours-hand-holder, .minutes-hand-holder {
@@ -406,7 +447,8 @@ font-family: $font-stack;
 	border: 1px solid #c0d2e4;
 	z-index: -1;
 	top: 0%;
-  	left: 29.1%;
+  	left: 50%;
+margin-left: -300px;
 }
 
 
