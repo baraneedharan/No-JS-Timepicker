@@ -464,7 +464,7 @@ body {
   transform: translate(6px, -730px);
 }
 #watch #check-min-10:checked ~ .base-minutes-display .base-minutes-holder {
-  -webkit-transform: translate(6px, -820px);
+  -webkit-transform: translate(6px, -820px); 
   -moz-transform: translate(6px, -820px);
   -o-transform: translate(6px, -820px);
   transform: translate(6px, -820px);
